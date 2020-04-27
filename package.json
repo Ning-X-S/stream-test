@@ -1,0 +1,17 @@
+{
+  "name": "check-net",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development node ./index.js",
+    "prod": "NODE_ENV=production node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "qiu wenju",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "json-bigint": "^0.3.0"
+  }
+}

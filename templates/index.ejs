@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>title</title>
+  <style>
+    .positive {
+      background:#03A85D!important ;
+    }
+    .negative {
+      background:#f55!important;
+    }
+    #contentDiv {
+      height:auto!important;
+      min-height:600px!important;
+    }
+    #mailContentContainer {
+      margin-right: 0!important;
+    }
+    ul li:first-child {
+      border-top: none !important;
+    }
+  </style>
+</head>
+  <body style="margin:0;font-family:PingFangSC-Regular AvenirNext-Medium;color:#333;min-height:600px;">
+    <div style="position:absolute;top:0;z-index:-1;width:100%;height:260px;background:linear-gradient(45deg,#0b4182 0%,#40baf5 100%);"></div>
+    <div style="margin:0 auto;min-width:300px;max-width:680px;min-height:600px;">
+      <div style="padding:30px 20px;">
+        <span style="display:inline-block;height:40px;line-height:40px;color:#fff;font-size:26px;">哈哈哈哈</span>
+        <!-- <a style="display:block;height:40px;line-height:40px;float:right;text-decoration:none;padding:0 10px;background-color:rgba(22,105,186);color:#fff;border-radius:4px;" href="http://works.lehe.com/contents/comment/app" target="_blank">前往后台</a> -->
+      </div>
+      <div style="padding:40px;background:#fff;border: 1px solid #eee;border-radius: 4px;box-shadow: 0 9px 20px 0px rgba(0,0,0,0.1);">
+        <div style="line-height: 40px;font-size: 20px;font-weight: bold;">的撒的 <span style="color: #FF6E6E;"><%= length %></span> 大多数啊</div>
+        <div style="color: #555;font-size: 16px;line-height: 20px;"><%= currentTime %></div>
+        <ul style="list-style-type:none;padding: 0;">
+          <% comments.forEach(function(comment, index){ %>
+            <li style="border-top:1px solid #eaeaea;padding:20px 20px 20px 0;display:flex;">
+              <div style="width:80px;display:flex;flex-direction:column;justify-content: center;">
+                <div
+                  class="<%= comment.statusText %>"
+                  style="margin:0 20px;text-align:center;background:#666;color:#fff;height:24px;line-height: 24px;border-radius:6px;"><%= index + 1 %></div>
+              </div>
+              <div style="flex:1;">
+                <div style="color:#666;padding: 10px 12px;line-height:32px;">开始时间：<%= comment.start_fail %></div>
+                <div style="color:#666;padding: 10px 12px;line-height:32px;">结束时间：<%= comment.end_fail %></div>
+              </div>
+            </li>
+          <% }); %>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
